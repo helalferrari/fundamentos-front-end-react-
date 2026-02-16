@@ -1,5 +1,12 @@
 import {FC} from "react";
 
-export const MeuNome: FC<{ name: string }> = (props) => {
-    return <p>{props.name}</p>;
+type MeuNomeProps = { name: string; age: number, birthDate: Date};
+
+export const MeuNome: FC<MeuNomeProps> = ({ name, age, birthDate } ) => {
+
+    return (
+            <p>Sou o {name}, tenho {age} anos porque nasci no dia {" "}
+                {birthDate.toLocaleDateString("pt-BR")}
+            </p>
+    );
 };

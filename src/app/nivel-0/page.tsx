@@ -1,12 +1,12 @@
-// export default function Page() {
-//   return <div>Page</div>;
-// }
-import { MeuNome } from "@/components/MeuNome";
+import Link from "next/link";
 
-const Page = () => (
+
+const Page = () => {
+    return (
     <div>
-        <MeuNome name={"Ferrari2"}/>
+        <Link className="underline" href="/nivel-0/ferrari">Página do Ferrari</Link>
     </div>
-);
+    );
+};
 
 export default Page;
