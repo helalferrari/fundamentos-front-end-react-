@@ -5,7 +5,7 @@ import { MeuNome } from "@/components/MeuNome";
 
 const Page = () => (
     <div>
-        <MeuNome/>
+        <MeuNome name={"Ferrari2"}/>
     </div>
 );
 
