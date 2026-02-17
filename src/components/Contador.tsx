@@ -1,10 +1,23 @@
 "use client"
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Button} from "@/components/Button";
 
 export const Counter = () => {
     const [counter, setCounter] = useState<number>(0);
     const [coisa, setCoisa] = useState<number>("");
+
+    useEffect(() => {
+        console.log("contador atualizado");
+    }, [counter])
+
+    useEffect(() => {
+        console.log("coisa atualizado");
+    }, [coisa])
+
+    useEffect(() => {
+        console.log("contador e coisa atualizado");
+    }, [counter, coisa])
+
 
     return (
         <div>
