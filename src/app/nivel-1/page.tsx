@@ -1,4 +1,4 @@
-import {Counter} from "@/components/Contador";
+import {Counter} from "@/components/Counter";
 
 const Page = () => {
     return (
