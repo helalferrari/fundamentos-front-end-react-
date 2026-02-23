@@ -1,4 +1,5 @@
-import CounterProvider, {CounterContext} from "@/context/CounterContext";
+import CounterProvider from "@/context/CounterContext";
+import React from "react";
 
 export default function Layout({
   children,

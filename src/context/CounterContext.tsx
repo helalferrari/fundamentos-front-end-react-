@@ -1,10 +1,8 @@
-"use client";
-
+"use client"
 import {createContext, Dispatch, ReactNode, SetStateAction, useState} from "react";
-
 type CounterContextType = {
-    counter: number;
-    setCounter: Dispatch<SetStateAction<number>>;
+    counter: number,
+    setCounter: Dispatch<SetStateAction<number>>,
 }
 
 export const CounterContext = createContext<CounterContextType>({
@@ -13,15 +11,14 @@ export const CounterContext = createContext<CounterContextType>({
 });
 
 export default function CounterProvider({
-        children,
-    }: {
-        children: ReactNode;
-    }) {
+     children,
+ }: {
+    children: ReactNode;
+}) {
     const [counter, setCounter] = useState(0);
-
     return (
-    <CounterContext.Provider value={{counter: 0, setCounter }}>
-        {children}
-    </CounterContext.Provider>
+        <CounterContext.Provider value={{ counter: counter, setCounter }}>
+            {children}
+        </CounterContext.Provider>
     );
 }

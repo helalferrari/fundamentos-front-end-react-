@@ -3,8 +3,8 @@ import {useEffect, useState} from "react";
 import {Button} from "@/components/Button";
 
 export const Counter = () => {
-    const [counter, setCounter] = useState<number>(0);
-    const [coisa, setCoisa] = useState<number>("");
+    const [counter, setCounter] = useState(0);
+    const [coisa, setCoisa] = useState("");
 
     useEffect(() => {
         console.log("contador atualizado");
@@ -15,7 +15,7 @@ export const Counter = () => {
     }, [coisa])
 
     useEffect(() => {
-        console.log("contador e coisa atualizado");
+        console.log("contador ou coisa atualizado");
     }, [counter, coisa])
 
 
