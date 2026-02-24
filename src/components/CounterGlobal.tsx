@@ -1,7 +1,6 @@
 "use client"
-
-import {CounterContext} from "@/context/CounterContext";
 import {useContext} from "react";
+import {CounterContext} from "@/context/CounterContext";
 import {Button} from "./Button";
 
 export const CounterGlobal = () => {
@@ -19,13 +18,13 @@ export const CounterGlobal = () => {
                 </Button>
                 <button className="border border-blue-500 px-4 py-1 rounded cursor-pointer bg-blue-500 hover:bg-blue-900"
                         onClick={() => {
-                            setCounter((c) => c + 3); //melhor pratica ẽ dessa forma
+                            setCounter((c) => (c ?? 0) + 3); //melhor pratica ẽ dessa forma
                         }}>
                     +3
                 </button>
                 <button className="border border-blue-500 px-4 py-1 rounded cursor-pointer bg-blue-500 hover:bg-blue-900"
                         onClick={() => {
-                            setCounter((c) => c - 3); //melhor pratica ẽ dessa forma
+                            setCounter((c) => (c ?? 0) - 3); //melhor pratica ẽ dessa forma
                         }}>
                     -3
                 </button>
